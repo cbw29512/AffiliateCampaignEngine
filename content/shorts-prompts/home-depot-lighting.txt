@@ -1,0 +1,22 @@
+Campaign: Modern Lighting
+Landing Page: pages/lighting-upgrade-room-fix.html
+Category: home
+
+Create a 20-35 second short-form video.
+
+Rules:
+- Start with a direct problem hook.
+- Use simple language.
+- Do not make fake guarantees.
+- Do not claim personal results unless manually verified.
+- Push viewer to check the linked page, not to blindly buy.
+- End with a curiosity-based CTA.
+
+Hook:
+Rooms feel dull and low energy.
+
+Offer angle:
+This Instantly Fixes a Dark Room
+
+CTA:
+Check the link for the full breakdown.

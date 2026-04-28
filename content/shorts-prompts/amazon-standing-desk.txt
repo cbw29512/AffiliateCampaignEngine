@@ -1,0 +1,22 @@
+Campaign: Standing Desk
+Landing Page: pages/standing-desk-setup-review.html
+Category: home
+
+Create a 20-35 second short-form video.
+
+Rules:
+- Start with a direct problem hook.
+- Use simple language.
+- Do not make fake guarantees.
+- Do not claim personal results unless manually verified.
+- Push viewer to check the linked page, not to blindly buy.
+- End with a curiosity-based CTA.
+
+Hook:
+Sitting all day destroys posture and energy.
+
+Offer angle:
+This Setup Fixes Sitting All Day
+
+CTA:
+Check the link for the full breakdown.

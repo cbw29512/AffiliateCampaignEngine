@@ -1,0 +1,22 @@
+Campaign: Kikoff
+Landing Page: pages/kikoff-credit-builder-review.html
+Category: money
+
+Create a 20-35 second short-form video.
+
+Rules:
+- Start with a direct problem hook.
+- Use simple language.
+- Do not make fake guarantees.
+- Do not claim personal results unless manually verified.
+- Push viewer to check the linked page, not to blindly buy.
+- End with a curiosity-based CTA.
+
+Hook:
+Building credit without fees or complexity is confusing.
+
+Offer angle:
+How Kikoff Can Help Build Credit Without a Credit Check
+
+CTA:
+Check the link for the full breakdown.
