@@ -21,5 +21,6 @@ run("generate-page.cjs");
 run("generate-redirect.cjs");
 run("generate-index.cjs");
 run("generate-traffic-prompts.cjs");
+run("qa.cjs");
 
-console.log("=== BUILD COMPLETE ===");
+console.log("=== BUILD COMPLETE (QA PASSED) ===");
