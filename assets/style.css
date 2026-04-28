@@ -20,13 +20,15 @@ body {
   padding: 32px;
 }
 
-.disclosure {
+.footer-disclosure {
   background: #fff7d6;
   border: 1px solid #ead68a;
   border-radius: 14px;
+  color: #374151;
   font-size: 0.95rem;
   line-height: 1.5;
-  padding: 14px 16px;
+  margin-top: 22px;
+  padding: 16px 18px;
 }
 
 .eyebrow {

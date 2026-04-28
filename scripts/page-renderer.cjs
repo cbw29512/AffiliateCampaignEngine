@@ -7,6 +7,10 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function renderList(items) {
+  return items.map(item => `<li>${escapeHtml(item)}</li>`).join("");
+}
+
 function renderAffiliatePage(campaign) {
   const disclosure =
     "Disclosure: This page may contain an affiliate or referral link. If you use the link, we may receive a benefit at no extra cost to you.";
@@ -23,43 +27,54 @@ function renderAffiliatePage(campaign) {
 <body>
   <main class="page-shell">
     <section class="hero-card">
-      <p class="disclosure"><strong>${escapeHtml(disclosure)}</strong></p>
       <p class="eyebrow">Affiliate Review</p>
       <h1>${escapeHtml(campaign.headline)}</h1>
-      <p class="lead">
-        ${escapeHtml(campaign.productName)} is being reviewed as part of an affiliate campaign.
-        This page explains what to check before signing up, what the product appears to offer,
-        and why terms should be verified directly on the official website.
-      </p>
-      <a class="cta" href="${escapeHtml(campaign.affiliateUrl)}" rel="sponsored nofollow">
+      <p class="lead">${escapeHtml(campaign.subheadline || "")}</p>
+
+      <a class="cta" href="redirect.html?cid=${escapeHtml(campaign.id)}" rel="sponsored nofollow">
         ${escapeHtml(campaign.primaryCta)}
       </a>
     </section>
 
     <section class="content-card">
-      <h2>What to verify first</h2>
-      <ul>
-        <li>Confirm current pricing on the official product website.</li>
-        <li>Confirm fees, limits, eligibility rules, and cancellation terms.</li>
-        <li>Do not rely on this page as financial, legal, or credit advice.</li>
-      </ul>
+      <h2>The Problem</h2>
+      <p>${escapeHtml(campaign.problem || "")}</p>
     </section>
 
     <section class="content-card">
-      <h2>Plain-English takeaway</h2>
-      <p>
-        This page is designed to help visitors make a careful decision.
-        Any personal results, credit impact, savings, or earnings claims must be verified
-        before this page is approved for public promotion.
-      </p>
+      <h2>Who This Might Help</h2>
+      <ul>${renderList(campaign.whoItHelps || [])}</ul>
     </section>
 
-    <p class="source">
-      Official source:
-      <a href="${escapeHtml(campaign.sourceUrl)}" rel="nofollow">
-        ${escapeHtml(campaign.sourceUrl)}
-      </a>
-    </p>
+    <section class="content-card">
+      <h2>Why Someone Might Consider This</h2>
+      <ul>${renderList(campaign.whyConsiderIt || [])}</ul>
+    </section>
+
+    <section class="content-card">
+      <h2>Things You Should Verify First</h2>
+      <ul>${renderList(campaign.whatToVerify || [])}</ul>
+    </section>
+
+    <section class="content-card">
+      <h2>Pros</h2>
+      <ul>${renderList(campaign.pros || [])}</ul>
+    </section>
+
+    <section class="content-card">
+      <h2>Cautions</h2>
+      <ul>${renderList(campaign.cautions || [])}</ul>
+    </section>
+
+    <footer class="footer-disclosure">
+      <p><strong>${escapeHtml(disclosure)}</strong></p>
+      <p>
+        Official source:
+        <a href="${escapeHtml(campaign.sourceUrl)}" rel="nofollow">
+          ${escapeHtml(campaign.sourceUrl)}
+        </a>
+      </p>
+    </footer>
   </main>
 </body>
 </html>`;

@@ -8,8 +8,37 @@
     "sourceUrl": "https://kikoff.com",
     "slug": "kikoff-credit-builder-review",
     "headline": "How Kikoff Can Help Build Credit Without a Credit Check",
+    "subheadline": "A plain-English review page for people comparing simple credit-building options.",
+    "problem": "Building credit can feel confusing when you do not want a hard credit check, interest charges, or complicated banking products.",
+    "whoItHelps": [
+      "People starting from thin or limited credit history",
+      "People comparing simple credit-building tools",
+      "People who want to understand the terms before signing up"
+    ],
+    "whyConsiderIt": [
+      "It is positioned as a simple credit-building option",
+      "It does not require a traditional credit card application flow",
+      "It may be easier to understand than more complex credit products"
+    ],
+    "whatToVerify": [
+      "Current pricing",
+      "Membership terms",
+      "Cancellation rules",
+      "Credit reporting details",
+      "Whether it fits your personal situation"
+    ],
     "personalProofAllowed": true,
-    "personalProofNotes": "User says this app helped them. Specific claims must be manually verified before publishing.",
+    "personalProofNotes": "User says this app helped them. Specific results must be manually verified before publishing.",
+    "pros": [
+      "Simple positioning",
+      "Low-friction signup claim should be verified",
+      "Useful for a beginner-friendly review page"
+    ],
+    "cautions": [
+      "Do not claim guaranteed credit score improvement",
+      "Do not give financial advice",
+      "Verify current terms directly on the official site"
+    ],
     "riskLevel": "medium",
     "disclosureRequired": true,
     "primaryCta": "Check out Kikoff",
