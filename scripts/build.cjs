@@ -53,6 +53,8 @@ run("generate-publish-ready-pack.cjs");
 run("qa-publish-ready-pack.cjs");
 run("generate-launch-batch.cjs");
 run("qa-launch-batch.cjs");
+run("qa-performance-ledger.cjs");
+run("generate-performance-report.cjs");
 
 copyAssets();
 removePublicIndex();

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "updatedAt": null,
+  "entries": [
+    {
+      "campaignId": "kikoff-credit-builder",
+      "launchBatch": "content/launch-batches/kikoff-credit-builder-launch-001.md",
+      "landingPageUrl": "https://cbw29512.github.io/AffiliateCampaignEngine/kikoff-credit-builder-review.html",
+      "platform": null,
+      "postUrl": null,
+      "postedAt": null,
+      "views": null,
+      "clicks": null,
+      "signups": null,
+      "revenue": null,
+      "notes": "Initial launch batch created. Metrics pending after first post.",
+      "decision": "not_started"
+    }
+  ]
+}

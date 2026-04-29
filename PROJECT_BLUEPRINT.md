@@ -302,3 +302,22 @@ Each launch batch must include:
 
 Draft, review_needed, paused, or blocked campaigns must not appear in launch batches.
 
+
+---
+
+## Performance Ledger Rule
+
+Campaign performance must be tracked with real recorded data only.
+
+The performance ledger must not invent:
+
+* views
+* clicks
+* signups
+* revenue
+* conversion rates
+
+Unknown metrics stay null until recorded.
+
+Performance reports must separate recorded metrics from decisions and notes.
+
