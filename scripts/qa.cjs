@@ -11,6 +11,12 @@ function requireFile(filePath) {
   }
 }
 
+function requireMissing(filePath) {
+  if (fs.existsSync(filePath)) {
+    throw new Error(`File should not be public: ${filePath}`);
+  }
+}
+
 function requireIncludes(filePath, text) {
   const content = fs.readFileSync(filePath, "utf8");
 
@@ -22,9 +28,9 @@ function requireIncludes(filePath, text) {
 function runQa() {
   const campaigns = validateCampaigns(loadCampaigns());
 
-  requireFile(path.join(PAGES_DIR, "index.html"));
+  requireMissing(path.join(PAGES_DIR, "index.html"));
   requireFile(path.join(PAGES_DIR, "redirect.html"));
-  requireFile(path.join(ROOT, "assets", "style.css"));
+  requireFile(path.join(PAGES_DIR, "assets", "style.css"));
 
   for (const campaign of campaigns) {
     const pagePath = path.join(PAGES_DIR, `${campaign.slug}.html`);
@@ -39,7 +45,7 @@ function runQa() {
     requireIncludes(promptPath, campaign.productName);
   }
 
-  logInfo(`PASS QA checked ${campaigns.length} campaigns`);
+  logInfo(`PASS QA checked ${campaigns.length} public campaign pages`);
 }
 
 function main() {

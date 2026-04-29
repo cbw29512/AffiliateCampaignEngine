@@ -4,5 +4,6 @@ node_modules/
 APIKeys.txt
 logs/*.json
 logs/*.txt
+dashboard/
 .DS_Store
 Thumbs.db

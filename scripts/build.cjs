@@ -19,20 +19,22 @@ function run(script) {
 }
 
 function copyAssets() {
-  if (!fs.existsSync(ASSETS_DEST)) {
-    fs.mkdirSync(ASSETS_DEST, { recursive: true });
-  }
+  fs.mkdirSync(ASSETS_DEST, { recursive: true });
 
-  const files = fs.readdirSync(ASSETS_SRC);
-
-  for (const file of files) {
-    fs.copyFileSync(
-      path.join(ASSETS_SRC, file),
-      path.join(ASSETS_DEST, file)
-    );
+  for (const file of fs.readdirSync(ASSETS_SRC)) {
+    fs.copyFileSync(path.join(ASSETS_SRC, file), path.join(ASSETS_DEST, file));
   }
 
   console.log("[INFO] Assets copied to docs/");
+}
+
+function removePublicIndex() {
+  const indexPath = path.join(DOCS, "index.html");
+
+  if (fs.existsSync(indexPath)) {
+    fs.unlinkSync(indexPath);
+    console.log("[INFO] Removed public campaign index");
+  }
 }
 
 console.log("=== BUILD START ===");
@@ -40,11 +42,11 @@ console.log("=== BUILD START ===");
 run("validate-schema.cjs");
 run("generate-page.cjs");
 run("generate-redirect.cjs");
-run("generate-index.cjs");
 run("generate-traffic-prompts.cjs");
 run("generate-social-posts.cjs");
 
 copyAssets();
+removePublicIndex();
 
 run("qa.cjs");
 
