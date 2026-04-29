@@ -348,3 +348,27 @@ The post recorder must not invent or estimate:
 
 Those metrics remain null until real values are manually recorded from the platform or affiliate dashboard.
 
+
+---
+
+## Metric Recording Rule
+
+Metrics may only be recorded from real platform or affiliate dashboard data.
+
+The metrics recorder may update:
+
+* views
+* clicks
+* signups
+* revenue
+* decision
+* notes
+
+The metrics recorder must reject:
+
+* missing values
+* negative values
+* non-numeric values
+
+Conversion rates and scaling decisions must not be invented.
+
