@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <p>Redirecting...</p>
+
+  <script>
+    const links = {
+  "kikoff-credit-builder": "https://kikoff.com/refer/FQY767IS",
+  "amazon-standing-desk": "https://amzn.to/4ttJsBV",
+  "home-depot-lighting": "https://homedepot.com"
+};
+    const params = new URLSearchParams(window.location.search);
+    const cid = params.get("cid");
+
+    if (!cid || !links[cid]) {
+      document.body.innerHTML = "<p>Invalid or missing campaign link.</p>";
+    } else {
+      window.location.href = links[cid];
+    }
+  </script>
+</body>
+</html>
