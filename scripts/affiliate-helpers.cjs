@@ -6,6 +6,26 @@ function hasValidUrl(value) {
   return /^https?:\/\//i.test(String(value || "").trim());
 }
 
+function resolveAffiliateUrl(campaign) {
+  if (!campaign || typeof campaign !== "object") {
+    throw new Error("Campaign is required to resolve affiliate URL.");
+  }
+
+  const affiliateUrl = String(campaign.affiliateUrl || "").trim();
+
+  if (hasValidUrl(affiliateUrl)) {
+    return affiliateUrl;
+  }
+
+  const sourceUrl = String(campaign.sourceUrl || "").trim();
+
+  if (hasValidUrl(sourceUrl)) {
+    return sourceUrl;
+  }
+
+  return "";
+}
+
 function isAmazonCampaign(campaign) {
   const joined = [
     campaign.id,
@@ -49,7 +69,12 @@ function hasVerifiedAmazonProductLink(campaign) {
 }
 
 function isPublicReady(campaign) {
-  const allowedStatuses = new Set(["approved", "published", "testing", "winner"]);
+  const allowedStatuses = new Set([
+    "approved",
+    "published",
+    "testing",
+    "winner"
+  ]);
 
   if (!allowedStatuses.has(campaign.status)) {
     return false;
@@ -83,8 +108,10 @@ function isPublicReady(campaign) {
 }
 
 module.exports = {
+  hasRequiredText,
   hasValidUrl,
   hasVerifiedAmazonProductLink,
   isAmazonCampaign,
-  isPublicReady
+  isPublicReady,
+  resolveAffiliateUrl
 };

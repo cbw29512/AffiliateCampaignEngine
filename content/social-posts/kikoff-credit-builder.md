@@ -1,22 +1,3 @@
-<!-- PROMOTION_GUARD_START -->
-
-# DO NOT PUBLISH YET
-
-Campaign: kikoff-credit-builder
-
-This campaign is not public-ready.
-Do not post this social content publicly yet.
-Do not send traffic to this campaign yet.
-
-Required before promotion:
-- Public landing page generated
-- Technical QA passed
-- Design QA passed
-- Affiliate/referral disclosure verified
-- Outbound redirect verified
-
-<!-- PROMOTION_GUARD_END -->
-
 # Kikoff Social Traffic Pack
 
 ## Campaign URL

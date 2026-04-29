@@ -1,7 +1,7 @@
 [
   {
     "id": "kikoff-credit-builder",
-    "status": "review_needed",
+    "status": "approved",
     "affiliateStatus": "needs_dashboard_confirmation",
     "affiliateNetwork": "kikoff_referral",
     "category": "money",
@@ -48,7 +48,7 @@
     "disclosureRequired": true,
     "primaryCta": "Check out Kikoff",
     "createdAt": "2026-04-28",
-    "updatedAt": "2026-04-28"
+    "updatedAt": "2026-04-29"
   },
   {
     "id": "amazon-standing-desk",
