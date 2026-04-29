@@ -39,6 +39,8 @@ run("validate-schema.cjs");
 run("qa-intake.cjs");
 run("generate-research-packets.cjs");
 run("qa-research-packets.cjs");
+run("generate-intake-dashboard.cjs");
+run("qa-intake-dashboard.cjs");
 run("generate-page.cjs");
 run("generate-homepage.cjs");
 run("qa-homepage.cjs");

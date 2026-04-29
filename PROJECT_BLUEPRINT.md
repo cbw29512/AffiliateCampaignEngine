@@ -437,3 +437,23 @@ They must not:
 
 Research packets must show missing proof clearly and keep the item blocked until verified.
 
+
+---
+
+## Operator Intake Dashboard Rule
+
+The operator intake dashboard may generate safe local commands for intake links.
+
+The dashboard must not:
+
+* publish products
+* run AI research in the browser
+* write files directly from GitHub Pages
+* invent affiliate proof
+* invent reviews
+* mark campaigns public-ready
+
+The dashboard must keep intake links visibly blocked until verification gates pass.
+
+Line count guidance is advisory. Do not block progress solely because a file exceeds 150 lines; refactor when size creates real maintainability or safety risk.
+

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Operator Intake Dashboard</title>
+  <meta name="description" content="Local operator dashboard for blocked affiliate product intake.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Operator Dashboard</p>
+      <h1>Affiliate Link Intake</h1>
+      <p>Paste a product URL, generate the safe local command, then run it in PowerShell. Nothing becomes public until verification gates pass.</p>
+    </header>
+
+    <section class="bottom-disclosure-section">
+      <h2>Safety Rule</h2>
+      <p>This page does not publish products, invent reviews, invent prices, or create public pages. It only helps prepare blocked intake commands.</p>
+    </section>
+
+    <section class="operator-panel" aria-labelledby="new-link-heading">
+      <h2 id="new-link-heading">Add a product link</h2>
+
+      <label for="productUrl">Product URL</label>
+      <input id="productUrl" class="operator-input" type="url" placeholder="https://example.com/product">
+
+      <label for="productNote">Optional note</label>
+      <textarea id="productNote" class="operator-input" rows="4" placeholder="Why this product is interesting, affiliate possibility, niche angle, etc."></textarea>
+
+      <button class="cta" type="button" onclick="generateCommand()">Generate safe command</button>
+
+      <h3>PowerShell command</h3>
+      <pre id="commandOutput" class="operator-command">Paste a URL above to generate a command.</pre>
+      <button class="secondary-cta" type="button" onclick="copyCommand()">Copy command</button>
+    </section>
+
+    <section class="operator-panel" aria-labelledby="queue-heading">
+      <h2 id="queue-heading">Current intake queue</h2>
+      <table class="operator-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Source</th>
+            <th>Status</th>
+            <th>Publish decision</th>
+            <th>Research packet</th>
+          </tr>
+        </thead>
+        <tbody>
+<tr>
+  <td><code>nimo-ai-mini-pc-amd-ryzen-ai-max-395-128gb-ram</code></td>
+  <td><a href="https://www.nimopc.com/products/nimo-ai-mini-pc-amd-ryzen-ai-max-395-128gb-ram" target="_blank" rel="nofollow noopener">Source</a></td>
+  <td>research_needed</td>
+  <td>blocked_until_verified</td>
+  <td>Generated</td>
+</tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="operator-panel">
+      <h2>After running the command</h2>
+      <pre class="operator-command">node .\scripts\build.cjs
+git add data content scripts PROJECT_BLUEPRINT.md
+git commit -m "Record intake link"
+git push</pre>
+    </section>
+  </main>
+
+  <script>
+    function psEscape(value) {
+      return String(value || "").replace(/"/g, '\"').trim();
+    }
+
+    function generateCommand() {
+      const url = document.getElementById("productUrl").value.trim();
+      const note = document.getElementById("productNote").value.trim();
+      const output = document.getElementById("commandOutput");
+
+      if (!url || !/^https?:\/\//i.test(url)) {
+        output.textContent = "Enter a valid product URL starting with http:// or https://.";
+        return;
+      }
+
+      const cleanNote = note || "Product candidate submitted from operator dashboard.";
+      output.textContent = 'node .\\scripts\\intake-link.cjs "' + psEscape(url) + '" "' + psEscape(cleanNote) + '"';
+    }
+
+    async function copyCommand() {
+      const text = document.getElementById("commandOutput").textContent;
+
+      try {
+        await navigator.clipboard.writeText(text);
+        alert("Command copied.");
+      } catch (error) {
+        alert("Copy failed. Select the command text manually.");
+      }
+    }
+  </script>
+</body>
+</html>
