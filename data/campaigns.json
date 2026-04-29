@@ -2,19 +2,43 @@
   {
     "id": "kikoff-credit-builder",
     "status": "review_needed",
+    "affiliateStatus": "needs_dashboard_confirmation",
+    "affiliateNetwork": "kikoff_referral",
     "category": "money",
     "productName": "Kikoff",
     "affiliateUrl": "https://kikoff.com/refer/FQY767IS",
     "sourceUrl": "https://kikoff.com",
     "slug": "kikoff-credit-builder-review",
     "headline": "How Kikoff Can Help Build Credit Without a Credit Check",
-    "subheadline": "Simple credit-building option explained in plain English.",
-    "problem": "Building credit without fees or complexity is confusing.",
-    "whoItHelps": ["Beginners", "People rebuilding credit"],
-    "whyConsiderIt": ["Simple positioning", "No traditional credit card"],
-    "whatToVerify": ["Pricing", "Terms", "Reporting"],
-    "pros": ["Simple", "Beginner-friendly"],
-    "cautions": ["Not guaranteed results"],
+    "subheadline": "A plain-English review page for people comparing simple credit-building options.",
+    "problem": "Building credit can feel confusing when you do not want a hard credit check, interest charges, or complicated banking products.",
+    "whoItHelps": [
+      "People starting from thin or limited credit history",
+      "People comparing simple credit-building tools",
+      "People who want to understand the terms before signing up"
+    ],
+    "whyConsiderIt": [
+      "It is positioned as a simple credit-building option",
+      "It does not require a traditional credit card application flow",
+      "It may be easier to understand than more complex credit products"
+    ],
+    "whatToVerify": [
+      "Current pricing",
+      "Membership terms",
+      "Cancellation rules",
+      "Credit reporting details",
+      "Whether it fits your personal situation"
+    ],
+    "pros": [
+      "Simple positioning",
+      "Beginner-friendly review angle",
+      "Useful for people comparing credit-building options"
+    ],
+    "cautions": [
+      "Do not claim guaranteed credit score improvement",
+      "Do not give financial advice",
+      "Verify current terms directly on the official site"
+    ],
     "riskLevel": "medium",
     "disclosureRequired": true,
     "primaryCta": "Check out Kikoff",
@@ -24,19 +48,45 @@
   {
     "id": "amazon-standing-desk",
     "status": "review_needed",
+    "affiliateStatus": "verified",
+    "affiliateNetwork": "amazon",
+    "trackingTag": "maxyourheal06-20",
     "category": "home",
     "productName": "Standing Desk",
-    "affiliateUrl": "https://amzn.to/4ttJsBV",
-    "sourceUrl": "https://amazon.com",
+    "affiliateUrl": "",
+    "baseProductUrl": "https://www.amazon.com/",
+    "sourceUrl": "https://www.amazon.com/",
     "slug": "standing-desk-setup-review",
     "headline": "This Setup Fixes Sitting All Day",
-    "subheadline": "Simple home office upgrade idea.",
-    "problem": "Sitting all day destroys posture and energy.",
-    "whoItHelps": ["Remote workers", "Gamers"],
-    "whyConsiderIt": ["Comfort", "Adjustable height"],
-    "whatToVerify": ["Weight capacity", "Build quality"],
-    "pros": ["Flexible setup"],
-    "cautions": ["Assembly required"],
+    "subheadline": "A simple home office upgrade idea for people who sit too much.",
+    "problem": "Sitting all day can make a workspace feel uncomfortable, low-energy, and harder to focus in.",
+    "whoItHelps": [
+      "Remote workers",
+      "People building a home office",
+      "People who want a more flexible desk setup"
+    ],
+    "whyConsiderIt": [
+      "A standing desk can make a workspace more adjustable",
+      "It can help people alternate between sitting and standing",
+      "It fits the home office improvement niche well"
+    ],
+    "whatToVerify": [
+      "Exact product dimensions",
+      "Weight capacity",
+      "Assembly requirements",
+      "Return policy",
+      "Current Amazon price"
+    ],
+    "pros": [
+      "Easy content angle for home office buyers",
+      "Good match for productivity and comfort posts",
+      "Amazon affiliate tracking tag is verified"
+    ],
+    "cautions": [
+      "Replace homepage URL with a specific product URL before serious promotion",
+      "Do not imply medical benefits",
+      "Verify reviews and specs on the exact product page"
+    ],
     "riskLevel": "low",
     "disclosureRequired": true,
     "primaryCta": "View on Amazon",
@@ -45,20 +95,44 @@
   },
   {
     "id": "home-depot-lighting",
-    "status": "review_needed",
+    "status": "paused",
+    "affiliateStatus": "not_verified",
+    "affiliateNetwork": "impact_home_depot",
     "category": "home",
     "productName": "Modern Lighting",
-    "affiliateUrl": "https://homedepot.com",
+    "affiliateUrl": "",
     "sourceUrl": "https://homedepot.com",
     "slug": "lighting-upgrade-room-fix",
     "headline": "This Instantly Fixes a Dark Room",
-    "subheadline": "One simple lighting upgrade idea.",
-    "problem": "Rooms feel dull and low energy.",
-    "whoItHelps": ["Homeowners", "Renters"],
-    "whyConsiderIt": ["Instant improvement"],
-    "whatToVerify": ["Installation", "Bulb compatibility"],
-    "pros": ["Quick impact"],
-    "cautions": ["Electrical setup required"],
+    "subheadline": "A simple lighting upgrade idea for rooms that feel dull or unfinished.",
+    "problem": "Rooms can feel dull, flat, or unfinished when the lighting is weak or mismatched.",
+    "whoItHelps": [
+      "Homeowners",
+      "Renters",
+      "People improving a room without a full remodel"
+    ],
+    "whyConsiderIt": [
+      "Lighting is a simple room improvement category",
+      "The angle works well for Pinterest and home content",
+      "It can be expanded once a real affiliate link is available"
+    ],
+    "whatToVerify": [
+      "Real Home Depot Impact affiliate link",
+      "Installation requirements",
+      "Bulb compatibility",
+      "Return policy",
+      "Current price"
+    ],
+    "pros": [
+      "Strong visual niche",
+      "Good Pinterest fit",
+      "Repeatable home improvement page format"
+    ],
+    "cautions": [
+      "Do not promote until a real affiliate tracking link exists",
+      "Do not use plain homedepot.com as an affiliate URL",
+      "Electrical installation claims must stay careful"
+    ],
     "riskLevel": "low",
     "disclosureRequired": true,
     "primaryCta": "See lighting options",
