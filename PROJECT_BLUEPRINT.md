@@ -260,3 +260,23 @@ Review cards must be source-backed and rated 4.5 or higher.
 
 The bottom disclosure must be visible, readable, and not hidden in tiny footer text.
 
+
+---
+
+## Publish-Ready Traffic Pack Rule
+
+Only public-ready campaigns may generate files inside:
+
+content/publish-ready/
+
+Draft, review_needed, paused, or blocked campaigns must not appear in publish-ready traffic packs.
+
+Publish-ready packs must include:
+
+* Live landing page URL
+* Tracked redirect URL
+* Social disclosure wording
+* Review evidence summary when available
+* Explicit "results vary" caution
+* Do-not-say guardrails for unsupported claims
+
