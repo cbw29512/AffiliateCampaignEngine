@@ -321,3 +321,30 @@ Unknown metrics stay null until recorded.
 
 Performance reports must separate recorded metrics from decisions and notes.
 
+
+---
+
+## Post Recording Rule
+
+After a launch batch is posted publicly, the post must be recorded in:
+
+data/performance-ledger.json
+
+The post recorder may update:
+
+* platform
+* postUrl
+* postedAt
+* decision
+* notes
+
+The post recorder must not invent or estimate:
+
+* views
+* clicks
+* signups
+* revenue
+* conversion rates
+
+Those metrics remain null until real values are manually recorded from the platform or affiliate dashboard.
+
