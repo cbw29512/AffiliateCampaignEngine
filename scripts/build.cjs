@@ -36,6 +36,7 @@ function removePublicIndex() {
 console.log("=== BUILD START ===");
 
 run("validate-schema.cjs");
+run("qa-intake.cjs");
 run("generate-page.cjs");
 run("generate-homepage.cjs");
 run("qa-homepage.cjs");

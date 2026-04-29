@@ -388,3 +388,30 @@ The homepage must not include:
 
 The homepage must include a clear disclosure section and link only to generated public landing pages.
 
+
+---
+
+## Link Intake Rule
+
+Product links may be submitted into:
+
+data/intake/incoming-links.json
+
+Intake links must start blocked.
+
+Allowed initial state:
+
+* status: research_needed
+* publishDecision: blocked_until_verified
+
+The intake engine must not:
+
+* create a public page automatically
+* invent affiliate programs
+* invent reviews
+* invent prices
+* mark anything public-ready
+* bypass review/disclosure/link QA
+
+A submitted link may only become a campaign after affiliate possibility, exact product URL, source-backed reviews, disclosure, and manual approval are verified.
+
