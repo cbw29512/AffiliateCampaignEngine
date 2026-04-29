@@ -280,3 +280,25 @@ Publish-ready packs must include:
 * Explicit "results vary" caution
 * Do-not-say guardrails for unsupported claims
 
+
+---
+
+## Launch Batch Rule
+
+Only public-ready campaigns may generate files inside:
+
+content/launch-batches/
+
+Each launch batch must include:
+
+* One short-video title
+* One short-video script
+* One TikTok/Reel caption
+* One pinned comment
+* Posting checklist
+* Required referral/compensation disclosure
+* Results-vary caution
+* Do-not-say guardrails
+
+Draft, review_needed, paused, or blocked campaigns must not appear in launch batches.
+

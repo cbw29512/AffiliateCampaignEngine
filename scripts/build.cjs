@@ -51,6 +51,8 @@ run("generate-social-posts.cjs");
 run("apply-promotion-guards.cjs");
 run("generate-publish-ready-pack.cjs");
 run("qa-publish-ready-pack.cjs");
+run("generate-launch-batch.cjs");
+run("qa-launch-batch.cjs");
 
 copyAssets();
 removePublicIndex();
