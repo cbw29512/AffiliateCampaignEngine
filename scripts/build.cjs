@@ -42,6 +42,7 @@ run("generate-page.cjs");
 run("generate-redirect.cjs");
 run("generate-index.cjs");
 run("generate-traffic-prompts.cjs");
+run("generate-social-posts.cjs");
 
 copyAssets();
 
