@@ -372,3 +372,19 @@ The metrics recorder must reject:
 
 Conversion rates and scaling decisions must not be invented.
 
+
+---
+
+## Public Homepage Rule
+
+The public homepage must list only public-ready campaigns.
+
+The homepage must not include:
+
+* draft campaigns
+* review_needed campaigns
+* paused campaigns
+* blocked campaigns
+
+The homepage must include a clear disclosure section and link only to generated public landing pages.
+

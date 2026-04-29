@@ -31,16 +31,14 @@ function copyAssets() {
 function removePublicIndex() {
   const indexPath = path.join(DOCS, "index.html");
 
-  if (fs.existsSync(indexPath)) {
-    fs.unlinkSync(indexPath);
-    console.log("[INFO] Removed public campaign index");
-  }
 }
 
 console.log("=== BUILD START ===");
 
 run("validate-schema.cjs");
 run("generate-page.cjs");
+run("generate-homepage.cjs");
+run("qa-homepage.cjs");
 run("inject-review-cards.cjs");
 run("enforce-bottom-disclosure.cjs");
 run("qa-review-cards.cjs");

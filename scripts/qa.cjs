@@ -115,9 +115,7 @@ function qaNonPublicCampaign(campaign) {
 function runQa() {
   const campaigns = validateCampaigns(loadCampaigns());
   const publicCampaigns = campaigns.filter(isPublicReady);
-
-  requireMissing(path.join(PAGES_DIR, "index.html"));
-  requireFile(path.join(PAGES_DIR, "assets", "style.css"));
+requireFile(path.join(PAGES_DIR, "assets", "style.css"));
   qaRedirect(campaigns);
 
   for (const campaign of campaigns) {
