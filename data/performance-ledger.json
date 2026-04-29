@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": null,
+  "updatedAt": "2026-04-29T15:15:28.369Z",
   "entries": [
     {
       "campaignId": "kikoff-credit-builder",
@@ -9,11 +9,11 @@
       "platform": null,
       "postUrl": null,
       "postedAt": null,
-      "views": null,
-      "clicks": null,
-      "signups": null,
-      "revenue": null,
-      "notes": "Initial launch batch created. Metrics pending after first post.",
+      "views": 100,
+      "clicks": 5,
+      "signups": 0,
+      "revenue": 0,
+      "notes": "Initial launch batch created. Metrics pending after first post.\n24 hour check",
       "decision": "not_started"
     }
   ]

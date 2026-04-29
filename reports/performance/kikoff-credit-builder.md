@@ -23,14 +23,15 @@ Not recorded
 
 | Metric | Value |
 |---|---:|
-| Views | Not recorded |
-| Clicks | Not recorded |
-| Signups | Not recorded |
-| Revenue | Not recorded |
+| Views | 100 |
+| Clicks | 5 |
+| Signups | 0 |
+| Revenue | 0 |
 
 ## Notes
 
 Initial launch batch created. Metrics pending after first post.
+24 hour check
 
 ## Decision Rules
 
