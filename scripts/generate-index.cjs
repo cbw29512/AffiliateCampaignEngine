@@ -34,7 +34,7 @@ function renderIndexPage(campaigns) {
   <meta charset="utf-8">
   <title>Affiliate Campaign Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/AffiliateCampaignEngine/assets/style.css">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <main class="page-shell">

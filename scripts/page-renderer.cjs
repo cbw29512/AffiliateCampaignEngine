@@ -22,7 +22,7 @@ function renderAffiliatePage(campaign) {
   <title>${escapeHtml(campaign.headline)}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${escapeHtml(campaign.headline)}">
-  <link rel="stylesheet" href="/AffiliateCampaignEngine/assets/style.css">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <main class="page-shell">
