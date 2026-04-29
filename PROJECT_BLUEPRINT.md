@@ -415,3 +415,25 @@ The intake engine must not:
 
 A submitted link may only become a campaign after affiliate possibility, exact product URL, source-backed reviews, disclosure, and manual approval are verified.
 
+
+---
+
+## Research Packet Rule
+
+Each intake link must generate a research packet in:
+
+content/research-packets/
+
+Research packets are internal preparation documents only.
+
+They must not:
+
+* mark a product public-ready
+* invent affiliate proof
+* invent price data
+* invent review evidence
+* generate a public landing page
+* bypass manual approval
+
+Research packets must show missing proof clearly and keep the item blocked until verified.
+
