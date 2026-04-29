@@ -117,3 +117,112 @@ Start with:
 6. Add dashboard
 7. Add video prompt generator
 8. Make repeatable campaign template
+
+---
+
+## Public-Ready Publishing Rule
+
+A campaign may generate draft traffic assets before it is public-ready.
+
+Public-ready campaigns must generate and pass QA for:
+* HTML landing page
+* Disclosure text
+* Trackable redirect CTA
+* Product/headline content
+
+Not-public-ready campaigns must not generate public HTML landing pages.
+
+Draft social posts and short-video prompts may exist for not-public-ready campaigns, but they must not be publicly promoted until the matching landing page passes QA.
+
+
+---
+
+## Professional Page Quality Rule
+
+Every public affiliate page must look clean, trustworthy, and professional before traffic is sent to it.
+
+A page is not public-ready unless it has:
+
+* Clean centered layout
+* Readable typography
+* Clear CTA button
+* Visible affiliate/referral disclosure
+* Mobile-friendly spacing
+* No raw/default HTML look
+* No fake income claims
+* No unsupported "best" claims
+* No fake reviews
+
+Technical QA and design QA are both required before public promotion.
+
+
+---
+
+## Traffic Promotion Guard Rule
+
+Draft social posts and short-video prompts may be generated before a campaign is public-ready.
+
+However, non-public-ready campaign traffic assets must be clearly marked:
+
+**DO NOT PUBLISH YET**
+
+A campaign cannot be promoted publicly until:
+
+* Public landing page exists
+* Technical QA passes
+* Design QA passes
+* Affiliate/referral disclosure is verified
+* Outbound redirect is verified
+
+Public-ready campaigns should have promotion guards cleared automatically during build.
+
+
+---
+
+## Image Size Quality Rule
+
+Affiliate landing page images must not overpower the page.
+
+Public campaign pages should use constrained, responsive images:
+
+* Product/hero images stay inside the content card
+* Images scale down on mobile
+* Images use professional spacing and rounded corners
+* Huge raw images are not allowed to dominate the layout
+* Visual QA must check image size before promotion
+
+
+---
+
+## Public Campaign URL Rule
+
+Every public-ready campaign must have a valid affiliateUrl.
+
+A campaign cannot be public-ready unless:
+
+* affiliateUrl exists
+* affiliateUrl starts with http:// or https://
+* redirect.html includes the campaign id
+* the CTA link routes through redirect.html?cid=campaign-id
+* draft campaigns are excluded from the public redirect map
+
+Broken or missing outbound links must fail the build.
+
+
+---
+
+## Amazon Product-Specific Link Rule
+
+Amazon affiliate campaigns must link to the exact intended product.
+
+A public Amazon campaign must have:
+
+* expectedAsin
+* exact sourceUrl for the intended Amazon product page
+* affiliateUrl generated from Amazon Associates SiteStripe or Mobile GetLink
+* amazonLinkVerified set to true only after the CTA opens the expected ASIN product page
+
+Generic Amazon homepage, search, category, or unrelated product links are not allowed for public-ready campaigns.
+
+If an Amazon short link hides the ASIN, manual verification is required before promotion.
+

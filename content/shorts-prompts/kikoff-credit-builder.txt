@@ -1,3 +1,22 @@
+<!-- PROMOTION_GUARD_START -->
+
+# DO NOT PUBLISH YET
+
+Campaign: kikoff-credit-builder
+
+This campaign is not public-ready.
+Do not post this social content publicly yet.
+Do not send traffic to this campaign yet.
+
+Required before promotion:
+- Public landing page generated
+- Technical QA passed
+- Design QA passed
+- Affiliate/referral disclosure verified
+- Outbound redirect verified
+
+<!-- PROMOTION_GUARD_END -->
+
 Campaign: Kikoff
 Landing Page: pages/kikoff-credit-builder-review.html
 Category: money
@@ -13,7 +32,7 @@ Rules:
 - End with a curiosity-based CTA.
 
 Hook:
-Building credit without fees or complexity is confusing.
+Building credit can feel confusing when you do not want a hard credit check, interest charges, or complicated banking products.
 
 Offer angle:
 How Kikoff Can Help Build Credit Without a Credit Check

@@ -1,37 +1,90 @@
-function hasAmazonTag(url) {
-  return url.includes("tag=");
+﻿function hasRequiredText(value) {
+  return typeof value === "string" && value.trim().length > 0;
 }
 
-function addAmazonTag(baseProductUrl, trackingTag) {
-  if (!baseProductUrl) {
-    throw new Error("Missing Amazon baseProductUrl.");
-  }
-
-  if (!trackingTag) {
-    throw new Error("Missing Amazon trackingTag.");
-  }
-
-  if (hasAmazonTag(baseProductUrl)) {
-    return baseProductUrl;
-  }
-
-  const joiner = baseProductUrl.includes("?") ? "&" : "?";
-  return `${baseProductUrl}${joiner}tag=${encodeURIComponent(trackingTag)}`;
+function hasValidUrl(value) {
+  return /^https?:\/\//i.test(String(value || "").trim());
 }
 
-function resolveAffiliateUrl(campaign) {
-  if (campaign.affiliateStatus !== "verified" && campaign.affiliateStatus !== "needs_dashboard_confirmation") {
-    return "";
+function isAmazonCampaign(campaign) {
+  const joined = [
+    campaign.id,
+    campaign.category,
+    campaign.productName,
+    campaign.sourceUrl,
+    campaign.affiliateUrl
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  return joined.includes("amazon") || joined.includes("amzn.to");
+}
+
+function hasVerifiedAmazonProductLink(campaign) {
+  if (!isAmazonCampaign(campaign)) {
+    return true;
   }
 
-  if (campaign.affiliateNetwork === "amazon") {
-    return addAmazonTag(campaign.baseProductUrl, campaign.trackingTag);
+  if (!hasRequiredText(campaign.expectedAsin)) {
+    return false;
   }
 
-  return campaign.affiliateUrl;
+  if (!hasValidUrl(campaign.affiliateUrl)) {
+    return false;
+  }
+
+  const url = String(campaign.affiliateUrl).toUpperCase();
+  const asin = String(campaign.expectedAsin).toUpperCase();
+
+  if (url.includes(asin)) {
+    return true;
+  }
+
+  if (String(campaign.affiliateUrl).includes("amzn.to")) {
+    return campaign.amazonLinkVerified === true;
+  }
+
+  return campaign.amazonLinkVerified === true;
+}
+
+function isPublicReady(campaign) {
+  const allowedStatuses = new Set(["approved", "published", "testing", "winner"]);
+
+  if (!allowedStatuses.has(campaign.status)) {
+    return false;
+  }
+
+  if (!hasRequiredText(campaign.id)) {
+    return false;
+  }
+
+  if (!hasRequiredText(campaign.slug)) {
+    return false;
+  }
+
+  if (!hasRequiredText(campaign.headline)) {
+    return false;
+  }
+
+  if (!hasRequiredText(campaign.productName)) {
+    return false;
+  }
+
+  if (!hasValidUrl(campaign.affiliateUrl)) {
+    return false;
+  }
+
+  if (!hasVerifiedAmazonProductLink(campaign)) {
+    return false;
+  }
+
+  return true;
 }
 
 module.exports = {
-  addAmazonTag,
-  resolveAffiliateUrl
+  hasValidUrl,
+  hasVerifiedAmazonProductLink,
+  isAmazonCampaign,
+  isPublicReady
 };

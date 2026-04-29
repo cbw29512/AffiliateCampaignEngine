@@ -3,15 +3,20 @@ const path = require("path");
 const { loadCampaigns } = require("./campaign-loader.cjs");
 const { validateCampaigns } = require("./validate-schema.cjs");
 const { renderAffiliatePage } = require("./page-renderer.cjs");
+const { isPublicReady } = require("./affiliate-helpers.cjs");
 const { PAGES_DIR } = require("./paths.cjs");
 const { logError, logInfo } = require("./logger.cjs");
 
-const GENERATABLE_STATUSES = [
-  "review_needed",
-  "approved",
-  "published",
-  "testing"
-];
+function cleanOldCampaignPages(campaigns) {
+  for (const campaign of campaigns) {
+    const outputPath = path.join(PAGES_DIR, `${campaign.slug}.html`);
+
+    if (fs.existsSync(outputPath)) {
+      fs.unlinkSync(outputPath);
+      logInfo(`Removed stale page ${outputPath}`);
+    }
+  }
+}
 
 function generatePages() {
   const campaigns = validateCampaigns(loadCampaigns());
@@ -20,11 +25,13 @@ function generatePages() {
     fs.mkdirSync(PAGES_DIR, { recursive: true });
   }
 
+  cleanOldCampaignPages(campaigns);
+
   let generatedCount = 0;
 
   for (const campaign of campaigns) {
-    if (!GENERATABLE_STATUSES.includes(campaign.status)) {
-      logInfo(`Skipped ${campaign.id} because status is ${campaign.status}`);
+    if (!isPublicReady(campaign)) {
+      logInfo(`Skipped ${campaign.id} because it is not public-ready`);
       continue;
     }
 
@@ -37,13 +44,13 @@ function generatePages() {
     logInfo(`Generated ${outputPath}`);
   }
 
+  logInfo(`PASS pages generated: ${generatedCount}`);
   return generatedCount;
 }
 
 function main() {
   try {
-    const generatedCount = generatePages();
-    logInfo(`PASS pages generated: ${generatedCount}`);
+    generatePages();
   } catch (error) {
     logError("Page generation failed", error);
     process.exit(1);

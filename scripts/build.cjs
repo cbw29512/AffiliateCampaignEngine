@@ -1,4 +1,4 @@
-const { execFileSync } = require("child_process");
+﻿const { execFileSync } = require("child_process");
 const path = require("path");
 const fs = require("fs");
 
@@ -44,6 +44,7 @@ run("generate-page.cjs");
 run("generate-redirect.cjs");
 run("generate-traffic-prompts.cjs");
 run("generate-social-posts.cjs");
+run("apply-promotion-guards.cjs");
 
 copyAssets();
 removePublicIndex();

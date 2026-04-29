@@ -1,3 +1,22 @@
+<!-- PROMOTION_GUARD_START -->
+
+# DO NOT PUBLISH YET
+
+Campaign: home-depot-lighting
+
+This campaign is not public-ready.
+Do not post this social content publicly yet.
+Do not send traffic to this campaign yet.
+
+Required before promotion:
+- Public landing page generated
+- Technical QA passed
+- Design QA passed
+- Affiliate/referral disclosure verified
+- Outbound redirect verified
+
+<!-- PROMOTION_GUARD_END -->
+
 Campaign: Modern Lighting
 Landing Page: pages/lighting-upgrade-room-fix.html
 Category: home
@@ -13,7 +32,7 @@ Rules:
 - End with a curiosity-based CTA.
 
 Hook:
-Rooms feel dull and low energy.
+Rooms can feel dull, flat, or unfinished when the lighting is weak or mismatched.
 
 Offer angle:
 This Instantly Fixes a Dark Room

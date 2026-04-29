@@ -1,3 +1,22 @@
+<!-- PROMOTION_GUARD_START -->
+
+# DO NOT PUBLISH YET
+
+Campaign: amazon-standing-desk
+
+This campaign is not public-ready.
+Do not post this social content publicly yet.
+Do not send traffic to this campaign yet.
+
+Required before promotion:
+- Public landing page generated
+- Technical QA passed
+- Design QA passed
+- Affiliate/referral disclosure verified
+- Outbound redirect verified
+
+<!-- PROMOTION_GUARD_END -->
+
 # Standing Desk Social Traffic Pack
 
 ## Campaign URL
@@ -11,7 +30,7 @@ Title:
 This Setup Fixes Sitting All Day
 
 Description:
-Sitting all day destroys posture and energy. Here is a simple plain-English breakdown of what to check before using Standing Desk. https://cbw29512.github.io/AffiliateCampaignEngine/standing-desk-setup-review.html
+Sitting all day can make a workspace feel uncomfortable, low-energy, and harder to focus in. Here is a simple plain-English breakdown of what to check before using Standing Desk. https://cbw29512.github.io/AffiliateCampaignEngine/standing-desk-setup-review.html
 
 ---
 
@@ -37,7 +56,7 @@ This plain-English page breaks down the possible benefits, cautions, and verific
 
 ## Facebook / Instagram Caption
 
-Sitting all day destroys posture and energy.
+Sitting all day can make a workspace feel uncomfortable, low-energy, and harder to focus in.
 
 I made a simple breakdown of Standing Desk, including:
 - who it might help
@@ -52,7 +71,7 @@ https://cbw29512.github.io/AffiliateCampaignEngine/standing-desk-setup-review.ht
 
 ## X / Twitter Post
 
-Sitting all day destroys posture and energy.
+Sitting all day can make a workspace feel uncomfortable, low-energy, and harder to focus in.
 
 I made a quick breakdown of Standing Desk: who it may help, what to verify, and what to watch out for.
 

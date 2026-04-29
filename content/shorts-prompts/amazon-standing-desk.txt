@@ -1,3 +1,22 @@
+<!-- PROMOTION_GUARD_START -->
+
+# DO NOT PUBLISH YET
+
+Campaign: amazon-standing-desk
+
+This campaign is not public-ready.
+Do not post this social content publicly yet.
+Do not send traffic to this campaign yet.
+
+Required before promotion:
+- Public landing page generated
+- Technical QA passed
+- Design QA passed
+- Affiliate/referral disclosure verified
+- Outbound redirect verified
+
+<!-- PROMOTION_GUARD_END -->
+
 Campaign: Standing Desk
 Landing Page: pages/standing-desk-setup-review.html
 Category: home
@@ -13,7 +32,7 @@ Rules:
 - End with a curiosity-based CTA.
 
 Hook:
-Sitting all day destroys posture and energy.
+Sitting all day can make a workspace feel uncomfortable, low-energy, and harder to focus in.
 
 Offer angle:
 This Setup Fixes Sitting All Day

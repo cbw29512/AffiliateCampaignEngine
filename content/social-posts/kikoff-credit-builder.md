@@ -1,3 +1,22 @@
+<!-- PROMOTION_GUARD_START -->
+
+# DO NOT PUBLISH YET
+
+Campaign: kikoff-credit-builder
+
+This campaign is not public-ready.
+Do not post this social content publicly yet.
+Do not send traffic to this campaign yet.
+
+Required before promotion:
+- Public landing page generated
+- Technical QA passed
+- Design QA passed
+- Affiliate/referral disclosure verified
+- Outbound redirect verified
+
+<!-- PROMOTION_GUARD_END -->
+
 # Kikoff Social Traffic Pack
 
 ## Campaign URL
@@ -11,7 +30,7 @@ Title:
 How Kikoff Can Help Build Credit Without a Credit Check
 
 Description:
-Building credit without fees or complexity is confusing. Here is a simple plain-English breakdown of what to check before using Kikoff. https://cbw29512.github.io/AffiliateCampaignEngine/kikoff-credit-builder-review.html
+Building credit can feel confusing when you do not want a hard credit check, interest charges, or complicated banking products. Here is a simple plain-English breakdown of what to check before using Kikoff. https://cbw29512.github.io/AffiliateCampaignEngine/kikoff-credit-builder-review.html
 
 ---
 
@@ -37,7 +56,7 @@ This plain-English page breaks down the possible benefits, cautions, and verific
 
 ## Facebook / Instagram Caption
 
-Building credit without fees or complexity is confusing.
+Building credit can feel confusing when you do not want a hard credit check, interest charges, or complicated banking products.
 
 I made a simple breakdown of Kikoff, including:
 - who it might help
@@ -52,7 +71,7 @@ https://cbw29512.github.io/AffiliateCampaignEngine/kikoff-credit-builder-review.
 
 ## X / Twitter Post
 
-Building credit without fees or complexity is confusing.
+Building credit can feel confusing when you do not want a hard credit check, interest charges, or complicated banking products.
 
 I made a quick breakdown of Kikoff: who it may help, what to verify, and what to watch out for.
 

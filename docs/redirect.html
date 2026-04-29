@@ -2,25 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Redirecting...</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Affiliate Redirect</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <p>Redirecting...</p>
+  <main>
+    <h1>Opening recommendation...</h1>
+    <p>If you are not redirected, the campaign link may be unavailable.</p>
+    <p><a class="cta" id="fallback-link" href="/">Return to campaign pages</a></p>
+  </main>
 
   <script>
-    const links = {
-  "kikoff-credit-builder": "https://kikoff.com/refer/FQY767IS",
-  "amazon-standing-desk": "https://amzn.to/4ttJsBV",
-  "home-depot-lighting": "https://homedepot.com"
-};
+    const REDIRECTS = {};
+
+    function showError(message) {
+      const main = document.querySelector("main");
+      main.innerHTML = [
+        "<h1>Link unavailable</h1>",
+        "<p>" + message + "</p>",
+        '<p><a class="cta" href="/">Return to campaign pages</a></p>'
+      ].join("");
+    }
+
     const params = new URLSearchParams(window.location.search);
     const cid = params.get("cid");
+    const target = REDIRECTS[cid];
 
-    if (!cid || !links[cid]) {
-      document.body.innerHTML = "<p>Invalid or missing campaign link.</p>";
+    if (!cid) {
+      showError("No campaign id was provided.");
+    } else if (!target) {
+      showError("This campaign is not public-ready or has no verified link.");
     } else {
-      window.location.href = links[cid];
+      const fallback = document.getElementById("fallback-link");
+      fallback.href = target;
+      fallback.textContent = "Continue to recommendation";
+      window.location.replace(target);
     }
   </script>
 </body>

@@ -1,3 +1,22 @@
+<!-- PROMOTION_GUARD_START -->
+
+# DO NOT PUBLISH YET
+
+Campaign: home-depot-lighting
+
+This campaign is not public-ready.
+Do not post this social content publicly yet.
+Do not send traffic to this campaign yet.
+
+Required before promotion:
+- Public landing page generated
+- Technical QA passed
+- Design QA passed
+- Affiliate/referral disclosure verified
+- Outbound redirect verified
+
+<!-- PROMOTION_GUARD_END -->
+
 # Modern Lighting Social Traffic Pack
 
 ## Campaign URL
@@ -11,7 +30,7 @@ Title:
 This Instantly Fixes a Dark Room
 
 Description:
-Rooms feel dull and low energy. Here is a simple plain-English breakdown of what to check before using Modern Lighting. https://cbw29512.github.io/AffiliateCampaignEngine/lighting-upgrade-room-fix.html
+Rooms can feel dull, flat, or unfinished when the lighting is weak or mismatched. Here is a simple plain-English breakdown of what to check before using Modern Lighting. https://cbw29512.github.io/AffiliateCampaignEngine/lighting-upgrade-room-fix.html
 
 ---
 
@@ -37,7 +56,7 @@ This plain-English page breaks down the possible benefits, cautions, and verific
 
 ## Facebook / Instagram Caption
 
-Rooms feel dull and low energy.
+Rooms can feel dull, flat, or unfinished when the lighting is weak or mismatched.
 
 I made a simple breakdown of Modern Lighting, including:
 - who it might help
@@ -52,7 +71,7 @@ https://cbw29512.github.io/AffiliateCampaignEngine/lighting-upgrade-room-fix.htm
 
 ## X / Twitter Post
 
-Rooms feel dull and low energy.
+Rooms can feel dull, flat, or unfinished when the lighting is weak or mismatched.
 
 I made a quick breakdown of Modern Lighting: who it may help, what to verify, and what to watch out for.
 
