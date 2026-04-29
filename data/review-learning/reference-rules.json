@@ -1,0 +1,36 @@
+﻿{
+  "version": 1,
+  "updatedAt": null,
+  "rules": [
+    {
+      "id": "no-best-claim-without-comparison-data",
+      "category": "claims",
+      "rule": "Do not use 'best' unless backed by real comparison data.",
+      "severity": "high"
+    },
+    {
+      "id": "high-ticket-needs-risk-section",
+      "category": "high-ticket",
+      "rule": "High-ticket products need a visible risk, warranty, return, and value section before publishing.",
+      "severity": "high"
+    },
+    {
+      "id": "thin-review-warning",
+      "category": "reviews",
+      "rule": "If review evidence is thin, unclear, or unverifiable, say so clearly and keep the item blocked.",
+      "severity": "high"
+    },
+    {
+      "id": "affiliate-proof-required",
+      "category": "affiliate",
+      "rule": "Do not publish a campaign without source-backed affiliate proof and the actual affiliate URL or code.",
+      "severity": "critical"
+    },
+    {
+      "id": "human-approval-required",
+      "category": "publishing",
+      "rule": "Do not mark a campaign public-ready until human approval is recorded.",
+      "severity": "critical"
+    }
+  ]
+}

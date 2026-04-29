@@ -457,3 +457,31 @@ The dashboard must keep intake links visibly blocked until verification gates pa
 
 Line count guidance is advisory. Do not block progress solely because a file exceeds 150 lines; refactor when size creates real maintainability or safety risk.
 
+
+---
+
+## Human Review Learning Rule
+
+The local operator site generator must use a human-in-the-loop review step before publishing.
+
+The Go button may create:
+
+* intake records
+* research packets
+* SEO drafts
+* human review files
+* suggestions for improvement
+
+The Go button must not directly publish a public campaign.
+
+Human review suggestions and outcomes should be stored in:
+
+data/review-learning/
+
+The system should improve over time by preserving accepted/rejected suggestions, but it must not invent proof, reviews, prices, or affiliate terms.
+
+Line count guidance is advisory:
+* Under 150 lines: ideal
+* 150-220 lines: warning only
+* 220+ lines: strong refactor candidate
+Do not block progress solely because a file exceeds 150 lines.
