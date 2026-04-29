@@ -41,6 +41,8 @@ console.log("=== BUILD START ===");
 
 run("validate-schema.cjs");
 run("generate-page.cjs");
+run("inject-review-cards.cjs");
+run("qa-review-cards.cjs");
 run("generate-redirect.cjs");
 run("generate-traffic-prompts.cjs");
 run("generate-social-posts.cjs");
@@ -52,3 +54,4 @@ removePublicIndex();
 run("qa.cjs");
 
 console.log("=== BUILD COMPLETE (QA PASSED) ===");
+

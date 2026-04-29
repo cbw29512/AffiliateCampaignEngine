@@ -226,3 +226,20 @@ Generic Amazon homepage, search, category, or unrelated product links are not al
 
 If an Amazon short link hides the ASIN, manual verification is required before promotion.
 
+
+---
+
+## Review Evidence Card Rule
+
+Public affiliate pages must include no-nonsense review evidence when review data is available.
+
+Review cards must:
+
+* Use public, source-backed review data only
+* Include at least 3 review highlights for public campaigns
+* Use reviews rated 4.5 or higher
+* Explain how the product helped in plain language
+* Include the source name and source URL
+* Avoid fake people, fake testimonials, fake results, or unsupported guarantees
+* Clearly state that individual results can vary
+

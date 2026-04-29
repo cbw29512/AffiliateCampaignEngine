@@ -48,7 +48,39 @@
     "disclosureRequired": true,
     "primaryCta": "Check out Kikoff",
     "createdAt": "2026-04-28",
-    "updatedAt": "2026-04-29"
+    "updatedAt": "2026-04-29",
+    "reviewHighlights": [
+      {
+        "rating": 5,
+        "reviewerLabel": "Andrew Mitchell, public Trustpilot reviewer",
+        "helpedWith": "Reported that Kikoff helped him with his credit.",
+        "noNonsenseTake": "Useful signal for people looking for a simple credit-building tool, but individual results still vary.",
+        "sourceName": "Trustpilot",
+        "sourceUrl": "https://ca.trustpilot.com/review/kikoff.com?page=5",
+        "sourceDate": "2025-11-27",
+        "verifiedAt": "2026-04-29"
+      },
+      {
+        "rating": 5,
+        "reviewerLabel": "Vanessa Pittman, public Trustpilot reviewer",
+        "helpedWith": "Reported being surprised by how fast her credit score improved while paying only a few dollars a month.",
+        "noNonsenseTake": "Good fit to mention affordability and ease, without promising the same result to every visitor.",
+        "sourceName": "Trustpilot",
+        "sourceUrl": "https://ca.trustpilot.com/review/kikoff.com?page=5",
+        "sourceDate": "2025-11-25",
+        "verifiedAt": "2026-04-29"
+      },
+      {
+        "rating": 5,
+        "reviewerLabel": "L Wise, public Trustpilot reviewer",
+        "helpedWith": "Reported a noticeable credit-score impact while also making other on-time payments and using another credit-builder card.",
+        "noNonsenseTake": "Best balanced example because it shows Kikoff may help as part of a broader credit-building routine.",
+        "sourceName": "Trustpilot",
+        "sourceUrl": "https://ca.trustpilot.com/review/kikoff.com?page=5",
+        "sourceDate": "2025-11-10",
+        "verifiedAt": "2026-04-29"
+      }
+    ]
   },
   {
     "id": "amazon-standing-desk",
