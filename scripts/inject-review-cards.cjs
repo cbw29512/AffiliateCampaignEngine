@@ -17,11 +17,12 @@ function escapeHtml(value) {
     .replaceAll('"', "&quot;");
 }
 
-function renderStars(rating) {
-  return `${Number(rating).toFixed(1)} / 5.0`;
+function stripExisting(html) {
+  const pattern = new RegExp(`${START}[\\s\\S]*?${END}\\n*`, "g");
+  return html.replace(pattern, "");
 }
 
-function renderReviews(campaign) {
+function renderReviewSection(campaign) {
   const reviews = Array.isArray(campaign.reviewHighlights)
     ? campaign.reviewHighlights
     : [];
@@ -30,53 +31,50 @@ function renderReviews(campaign) {
     return "";
   }
 
-  const cards = reviews
-    .map((review) => {
-      return `<article class="review-evidence-card">
-  <div class="review-rating">${escapeHtml(renderStars(review.rating))}</div>
+  const cards = reviews.map((review) => {
+    return `<article class="review-evidence-card">
+  <div class="review-rating">${Number(review.rating).toFixed(1)} / 5.0</div>
   <h3>${escapeHtml(review.reviewerLabel)}</h3>
   <p><strong>How it helped:</strong> ${escapeHtml(review.helpedWith)}</p>
   <p><strong>No-nonsense take:</strong> ${escapeHtml(review.noNonsenseTake)}</p>
-  <p class="review-source">
-    Source: <a href="${escapeHtml(review.sourceUrl)}" rel="nofollow noopener" target="_blank">${escapeHtml(review.sourceName)}</a>
-  </p>
+  <p class="review-source">Source: <a href="${escapeHtml(review.sourceUrl)}" rel="nofollow noopener" target="_blank">${escapeHtml(review.sourceName)}</a></p>
 </article>`;
-    })
-    .join("\n");
+  }).join("\n");
 
   return `${START}
 <section class="review-evidence-section" aria-labelledby="review-evidence-heading">
   <p class="eyebrow">No-nonsense review evidence</p>
   <h2 id="review-evidence-heading">How real reviewers say this helped</h2>
-  <p>These are public review summaries. They are not guarantees, and individual results can vary.</p>
+  <p>These are public review summaries. They are not guarantees. Individual credit results vary.</p>
   <div class="review-evidence-grid">
 ${cards}
   </div>
 </section>
-${END}`;
+${END}
+`;
 }
 
-function stripExistingReviewSection(html) {
-  const pattern = new RegExp(`${START}[\\s\\S]*?${END}`, "g");
-  return html.replace(pattern, "");
-}
-
-function injectIntoHtml(html, section) {
-  const clean = stripExistingReviewSection(html);
-
+function insertNearTop(html, section) {
   if (!section) {
-    return clean;
+    return html;
   }
 
-  if (clean.includes("</main>")) {
-    return clean.replace("</main>", `${section}\n</main>`);
+  const clean = stripExisting(html);
+  const headerIndex = clean.indexOf("</header>");
+
+  if (headerIndex >= 0) {
+    const insertAt = headerIndex + "</header>".length;
+    return clean.slice(0, insertAt) + "\n" + section + clean.slice(insertAt);
   }
 
-  if (clean.includes("</body>")) {
-    return clean.replace("</body>", `${section}\n</body>`);
+  const h1Index = clean.indexOf("</h1>");
+
+  if (h1Index >= 0) {
+    const insertAt = h1Index + "</h1>".length;
+    return clean.slice(0, insertAt) + "\n" + section + clean.slice(insertAt);
   }
 
-  throw new Error("Could not find </main> or </body> injection point.");
+  throw new Error("Could not find header or h1 for top review injection.");
 }
 
 function injectReviewCards() {
@@ -86,15 +84,14 @@ function injectReviewCards() {
     const pagePath = path.join(PAGES_DIR, `${campaign.slug}.html`);
 
     if (!fs.existsSync(pagePath)) {
-      throw new Error(`Missing public page for review injection: ${pagePath}`);
+      throw new Error(`Missing public page: ${pagePath}`);
     }
 
     const html = fs.readFileSync(pagePath, "utf8");
-    const section = renderReviews(campaign);
-    const nextHtml = injectIntoHtml(html, section);
+    const section = renderReviewSection(campaign);
+    fs.writeFileSync(pagePath, insertNearTop(html, section), "utf8");
 
-    fs.writeFileSync(pagePath, nextHtml, "utf8");
-    logInfo(`Injected review evidence cards into ${campaign.slug}.html`);
+    logInfo(`Injected top review evidence into ${campaign.slug}.html`);
   }
 }
 

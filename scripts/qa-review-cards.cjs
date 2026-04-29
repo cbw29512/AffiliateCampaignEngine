@@ -6,6 +6,21 @@ const { isPublicReady, hasValidUrl } = require("./affiliate-helpers.cjs");
 const { PAGES_DIR } = require("./paths.cjs");
 const { logError, logInfo } = require("./logger.cjs");
 
+function escapeHtml(value) {
+  return String(value || "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
+
+function htmlContainsUrl(html, url) {
+  const raw = String(url || "");
+  const escaped = escapeHtml(raw);
+
+  return html.includes(raw) || html.includes(escaped);
+}
+
 function requireText(value, label) {
   if (typeof value !== "string" || value.trim().length === 0) {
     throw new Error(`Missing review field: ${label}`);
@@ -64,7 +79,7 @@ function qaReviewCards() {
     }
 
     for (const review of reviews) {
-      if (!html.includes(review.sourceUrl)) {
+      if (!htmlContainsUrl(html, review.sourceUrl)) {
         throw new Error(`${campaign.id} page missing review source URL`);
       }
     }
@@ -85,3 +100,4 @@ function main() {
 if (require.main === module) {
   main();
 }
+

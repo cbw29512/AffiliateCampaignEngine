@@ -243,3 +243,20 @@ Review cards must:
 * Avoid fake people, fake testimonials, fake results, or unsupported guarantees
 * Clearly state that individual results can vary
 
+
+---
+
+## Page Section Order Rule
+
+Public affiliate pages must use this section order:
+
+1. Hero / headline
+2. No-nonsense review evidence near the top
+3. Product explanation
+4. CTA
+5. Full disclosure at the bottom
+
+Review cards must be source-backed and rated 4.5 or higher.
+
+The bottom disclosure must be visible, readable, and not hidden in tiny footer text.
+
